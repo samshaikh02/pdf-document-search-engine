@@ -7,8 +7,6 @@ import {
   History, 
   Settings, 
   Database,
-  Cpu,
-  ShieldCheck,
   Cloud
 } from 'lucide-react';
 
@@ -30,8 +28,8 @@ export default function Sidebar({ activeTab, setActiveTab, storageStats, isCloud
           <Search className="w-5 h-5" />
         </div>
         <div>
-          <span className="font-bold text-white text-base tracking-tight flex items-center gap-1.5">
-            DocuSearch
+          <div className="font-bold text-white text-base tracking-tight flex items-center gap-1.5">
+            <span>DocuSearch</span>
             <span className={`text-[10px] font-semibold uppercase tracking-wider px-1.5 py-0.5 rounded border ${
               isCloudActive
                 ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30'
@@ -39,7 +37,7 @@ export default function Sidebar({ activeTab, setActiveTab, storageStats, isCloud
             }`}>
               {isCloudActive ? 'Cloud' : 'Local'}
             </span>
-          </span>
+          </div>
           <p className="text-[11px] text-slate-400">
             {isCloudActive ? 'Multi-Device Live Sync' : 'Client-Side PDF Engine'}
           </p>
